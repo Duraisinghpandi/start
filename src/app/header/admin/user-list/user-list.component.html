@@ -1,0 +1,13 @@
+<div class="admin-user-list">
+    <div *ngIf="userList.length === 0" class="no-data-msg">
+        No data found.
+    </div>
+    <div class="admin-user-detail" *ngFor="let user of userList">
+        <div class="admin-user-name">{{user.name}}</div>
+        <div class="admin-user-gender">{{user.gender}}</div>
+        <div class="admin-user-subtype">{{user.subType}}</div>
+        <div class="admin-user-active">{{user.status}}</div>
+        <button (click)="showUserDetails(user)"class="admin-user-show-detail-button">+</button>
+        <button (click)="removeUser(user)" class="admin-user-show-detail-button">-</button>
+    </div>   
+</div>
